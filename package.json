@@ -8,11 +8,12 @@
   "main": "javascript.js",
   "scripts": {
     "lint": "eslint . --ext .js",
-    "test": "jasmine",
+    "test": "karma start --singleRun",
     "pretest": "npm run lint",
     "build": "echo \"BUILD OK\" && exit 0",
     "prebuild": "npm run version && npm run test",
     "start": "http-server src",
+    "lintfix": "./node_modules/.bin/eslint --fix *.js",
     "version": "node version-check.js"
   },
   "author": "",
@@ -23,6 +24,10 @@
     "eslint-plugin-react": "^7.13.0",
     "http-server": "^0.11.1",
     "jasmine": "^3.4.0",
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-commonjs": "^1.0.0",
+    "karma-jasmine": "^2.0.1",
     "semver": "^6.0.0"
   }
 }
