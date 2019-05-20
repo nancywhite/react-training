@@ -2,11 +2,15 @@
   "name": "react-training",
   "version": "1.0.0",
   "description": "React Project Template with automated build",
+  "engines": {
+    "node" : "8.11.2"
+  }
   "main": "javascript.js",
   "scripts": {
     "test": "echo \"All tests passed\" && exit 0",
     "build": "echo \"BUILD OK\" && exit 0",
-    "prebuild": "npm run test"
+    "prebuild": "npm run test",
+    "version": "node version-check.js"
   },
   "author": "",
   "license": "ISC"
