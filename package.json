@@ -3,15 +3,23 @@
   "version": "1.0.0",
   "description": "React Project Template with automated build",
   "engines": {
-    "node" : "8.11.2"
-  }
+    "node": "10.15.2"
+  },
   "main": "javascript.js",
   "scripts": {
+    "lint": "eslint . --ext .js",
     "test": "echo \"All tests passed\" && exit 0",
+    "pretest": "npm run lint",
     "build": "echo \"BUILD OK\" && exit 0",
-    "prebuild": "npm run test",
+    "prebuild": "npm run version && npm run test",
     "version": "node version-check.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-react": "^7.13.0",
+    "semver": "^6.0.0"
+  }
 }
