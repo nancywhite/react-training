@@ -12,6 +12,7 @@
     "pretest": "npm run lint",
     "build": "echo \"BUILD OK\" && exit 0",
     "prebuild": "npm run version && npm run test",
+    "start": "http-server src",
     "version": "node version-check.js"
   },
   "author": "",
@@ -20,6 +21,7 @@
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.13.0",
     "eslint-plugin-react": "^7.13.0",
+    "http-server": "^0.9.0",
     "semver": "^6.0.0"
   }
 }
