@@ -8,13 +8,13 @@
   "main": "javascript.js",
   "scripts": {
     "lint": "eslint . --ext .js",
-    "test": "karma start --singleRun",
+    "lintfix": "eslint . --ext .js --fix",
     "pretest": "npm run lint",
-    "build": "echo \"BUILD OK\" && exit 0",
+    "test": "karma start --singleRun",
     "prebuild": "npm run version && npm run test && npm run bundle",
-    "start": "http-server dist",
-    "lintfix": "./node_modules/.bin/eslint --fix *.js",
+    "build": "echo \"BUILD OK\" && exit 0",
     "bundle": "webpack",
+    "start": "http-server dist",
     "version": "node version-check.js"
   },
   "author": "",
