@@ -1,4 +1,4 @@
-let sayHello = require('../src/sayHello.js');
+let sayHello = require('../src/scripts/sayHello.js');
 
 describe('Greet', function() {
     it('concats Hello and a name when a name is given', function() {
