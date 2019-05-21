@@ -3,12 +3,21 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    devtool: 'source-map',
     mode: 'development',
+    devtool: 'source-map',
     entry: './src/scripts/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/app.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            }
+        ]
     },
     plugins: [
         new CleanWebpackPlugin(),

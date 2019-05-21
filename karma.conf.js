@@ -15,7 +15,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'spec/**/*Spec.js'
+            'spec/**/*Spec.js',
         ],
 
 
@@ -29,6 +29,20 @@ module.exports = function(config) {
         preprocessors: {
             'src/**/*.js': ['webpack'],
             'spec/**/*.js': ['webpack']
+        },
+
+        webpack: {
+          mode: 'development',
+          entry: './src/scripts/app.js',
+          module: {
+              rules: [
+                  {
+                      test: /\.js$/,
+                      exclude: /node_modules/,
+                      loader: 'babel-loader'
+                  }
+              ]
+          }
         },
 
 

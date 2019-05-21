@@ -1,6 +1,6 @@
-let sayHello = require('../src/scripts/sayHello.js');
-let User = require('../src/models/user.js');
-let Language = require('../src/models/language.json');
+import * as sayHello from '../src/scripts/sayHello.js';
+import User from '../src/models/user.js';
+import Language from '../src/models/language.json';
 
 describe('Greet', function() {
     it('concats Hello and a name when a name is given', function() {

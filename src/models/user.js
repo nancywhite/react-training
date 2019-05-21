@@ -1,12 +1,11 @@
-const language = require('../models/language.json');
+import Language from './language.json';
 
-
-module.exports = class User {
+export default class {
     constructor(name) {
         this.name = name;
-        this.preferredLanguage = language.English;
+        this.preferredLanguage = Language.English;
     }
     setPreferredLanguage(language) {
         this.preferredLanguage = language;
     }
-};
+}

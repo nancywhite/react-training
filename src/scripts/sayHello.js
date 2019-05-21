@@ -1,5 +1,4 @@
-exports.greet = function greet(user, theDateTime) {
-
+export let greet = (user, theDateTime) => {
     if (!user) {
         return 'Please login';
     }
@@ -18,6 +17,5 @@ exports.greet = function greet(user, theDateTime) {
             greeting = user.preferredLanguage.greeting[3];
         }
     }
-
     return `${greeting} ${user.name}`;
 };
