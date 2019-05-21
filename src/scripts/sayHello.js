@@ -1,16 +1,23 @@
-exports.greet = function greet(name, preferredLanguage = 'English') {
-    let greeting = 'Hello';
-    let friend = 'friend';
+exports.greet = function greet(user, theDateTime) {
 
-    switch (preferredLanguage) {
-    case 'Spanish':
-        greeting = 'Hola';
-        friend = 'amigo';
-        break;
-    default:
-        break;
+    if (!user) {
+        return 'Please login';
+    }
+    let greeting = user.preferredLanguage.greeting[0];
+
+    if (theDateTime) {
+
+        let hour = theDateTime.getHours();
+
+        if (hour > 0 && hour < 12) {
+            greeting = user.preferredLanguage.greeting[1];
+        }
+        else if (hour >= 12 && hour < 17) {
+            greeting = user.preferredLanguage.greeting[2];
+        } else if (hour >=17 && hour <= 24) {
+            greeting = user.preferredLanguage.greeting[3];
+        }
     }
 
-    let who = name ? name: friend;
-    return `${greeting} ${who}`;
+    return `${greeting} ${user.name}`;
 };

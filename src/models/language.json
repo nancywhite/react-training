@@ -1,0 +1,11 @@
+{
+  "English": {
+    "greeting": ["Hello", "Good morning", "Good afternoon", "Good evening"]
+  },
+  "French": {
+    "greeting": ["Allo", "Bonjour", "Bon tarde", "Bon nuit"]
+  },
+  "Spanish": {
+    "greeting": ["Hola", "Buenos dias", "Buenos tardes", "Buenos noches"]
+  }
+}
