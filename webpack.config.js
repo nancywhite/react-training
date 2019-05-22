@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -26,6 +27,12 @@ module.exports = {
             title: 'Take a poll...',
             mainDiv: 'welcome-message',
             template: 'src/index.html'
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: 'src/data',
+                to: 'data/'
+            }
+        ])
     ]
 };

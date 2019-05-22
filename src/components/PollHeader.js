@@ -1,9 +1,3 @@
 import React from 'react';
 
-class PollHeader extends React.Component {
-    render() {
-        return (<h1>Welcome!</h1>);
-    }
-}
-
-export default PollHeader;
+export default (props) => <h1 className="text-center">{props.text}</h1> ;

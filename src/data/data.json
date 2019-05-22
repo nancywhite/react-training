@@ -1,0 +1,25 @@
+{
+  "poll":
+  {
+    "header": "Welcome to the Poll!",
+    "questions" : [
+      {
+        "question": "What is the meaning of life?",
+        "choices": [
+          {"value": "Love", "label": "To love and be loved"},
+          {"value": "Fun", "label": "To have fun"},
+          {"value": "42", "label": "42"}
+        ],
+        "correctAnswer": "42"
+      },
+      {
+        "question": "What's your favorite color?:",
+        "choices": [
+          {"value": "Orange", "label": "Orange"},
+          {"value": "Blue", "label": "Blue"}
+        ],
+        "correctAnswer": "Blue"
+      }
+    ]
+}
+}
