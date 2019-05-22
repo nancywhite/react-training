@@ -16,3 +16,22 @@
 [0521/134214.990:ERROR:process_info.cc(550)] ReadMemoryInfo failed
 [0521/134214.990:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
 [0521/134214.990:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0521/153504.112:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0521/153504.113:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0521/153504.113:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0521/153504.113:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0521/153714.942:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0521/153714.943:ERROR:exception_snapshot_win.cc(98)] thread ID 14152 not found in process
+[0521/155456.166:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0521/155456.167:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0521/155456.167:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0521/160207.388:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0521/160207.390:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0521/160207.390:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0521/160555.983:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0521/160555.984:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0521/160555.984:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0521/161744.494:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0521/161744.495:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0521/161744.495:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0521/161744.497:ERROR:exception_snapshot_win.cc(98)] thread ID 7864 not found in process

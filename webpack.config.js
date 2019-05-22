@@ -23,7 +23,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            title: 'Welcome to my page!',
+            title: 'Take a poll...',
             mainDiv: 'welcome-message',
             template: 'src/index.html'
         })
