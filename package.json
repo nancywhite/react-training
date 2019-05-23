@@ -9,9 +9,8 @@
   "scripts": {
     "lint": "eslint . --ext .js",
     "lintfix": "eslint . --ext .js --fix",
-    "jest": "jest",
     "pretest": "npm run lint",
-    "test": "karma start --singleRun",
+    "test": "jest",
     "prebuild": "npm run version && npm run test && npm run bundle",
     "build": "echo \"BUILD OK\" && exit 0",
     "bundle": "webpack",

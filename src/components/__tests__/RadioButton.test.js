@@ -5,25 +5,23 @@ describe('Radio Button', ()=> {
 
     const RadioButton = require('../RadioButton').default;
 
-    it('renders with appropriately', function() {
+    it('renders with expected props', function() {
         const mockChangeHandler = jest.fn();
 
         const wrapper = shallow(
             <RadioButton
-                key = "key"
-                label = "label"
-                name = "name"
+                key = "myKey"
+                label = "myLabel"
+                name = {0}
                 value = "myValue"
                 checked = {false}
                 changeHandler = {mockChangeHandler} />);
 
-        const v = wrapper.find('input').prop('value');
-        // const va = wrapper.find('input[value]').value();
+        const inputRadioButton = wrapper.find('input');
+        console.log(wrapper.debug());
 
-        expect(v).toEqual('myValue');
-        // expect(va).toEqual('myValue');
-
+        expect(inputRadioButton.prop('type')).toEqual('radio');
+        expect(inputRadioButton.prop('name')).toEqual(0);
+        expect(inputRadioButton.prop('value')).toEqual('myValue');
     });
-
-
 });
