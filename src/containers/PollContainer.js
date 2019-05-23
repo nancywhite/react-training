@@ -4,7 +4,6 @@ import PollQuestion from '../components/PollQuestion.js';
 import PollSubmitButton from '../components/PollSubmitButton.js';
 import RadioButtonGroup from '../components/RadioButtonGroup.js';
 import CurrentChoice from '../components/CurrentChoice.js';
-import AnswerStatus from '../components/AnswerStatus.js';
 import $ from 'jquery';
 
 class PollContainer extends React.Component {
@@ -32,7 +31,7 @@ class PollContainer extends React.Component {
         this.setState({
             checkedValue: value
         });
-        let status = (value === this.state.correctAnswer) ? 'correct' : 'incorrect'
+        let status = (value === this.state.correctAnswer) ? 'correct' : 'incorrect';
         this.setAnswerStatus(`Your answer is ${status}`);
     }
 
@@ -40,8 +39,10 @@ class PollContainer extends React.Component {
         console.log('componentDidMount');
         this.serverRequest = $.get('http://localhost:8080/data/data.json', function(result) {
             var data = result;
+            //TODO this has to change to allow question, choices and correct answer, answerStatus to have more than one...
             this.setState({
                 header: data.poll.header,
+                questions: data.poll.questions,
                 question: data.poll.questions[0].question,
                 choices: data.poll.questions[0].choices,
                 correctAnswer: data.poll.questions[0].correctAnswer
@@ -83,8 +84,7 @@ class PollContainer extends React.Component {
                                 choices = {this.state.choices}
                                 changeHandler = {this.setCheckedValue}
                             />
-                            <CurrentChoice checked = {this.state.checkedValue} chosenMessage = {this.state.chosenMessage}/>
-                            <AnswerStatus text={this.state.answerStatus}/>
+                            <CurrentChoice checked = {this.state.checkedValue}/>
                             <PollSubmitButton />
                         </form>
                     </div>

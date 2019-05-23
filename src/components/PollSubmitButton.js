@@ -1,3 +1,8 @@
 import React from 'react';
 
-export default () => <button className="btn btn-success">Choose</button> ;
+function PollSubmitButton(props) {
+    return (
+        <button className="btn btn-success" onClick= { (event) => {props.handleClick(event);} }>Choose</button>
+    );
+}
+export default PollSubmitButton;
