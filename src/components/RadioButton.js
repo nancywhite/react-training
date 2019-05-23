@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class RadioButton extends React.Component {
 
     handleChange() {
-        console.log('handling change for: ' + this.props.name + " " + this.props.value);
+        console.log('handling change for: ' + this.props.name + ' ' + this.props.value);
         this.props.onChange(this.props.name, this.props.value);
     }
     render() {

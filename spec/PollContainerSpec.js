@@ -17,9 +17,9 @@ describe('PollContainer', ()=> {
         expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'h1').length).toEqual(1);
     });
 
-    it('renders 1 PollQuestion', ()=> {
-        expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'h2').length).toEqual(1);
-    });
+    // it('renders 3 PollQuestion', ()=> {
+    //     expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'h2').length).toEqual(3);
+    // });
 
     // it('renders 3 input components', ()=> {
     //     expect(TestUtils.scryRenderedDOMComponentsWithTag(component, 'input').length).toEqual(3);

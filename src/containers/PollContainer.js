@@ -25,7 +25,7 @@ class PollContainer extends React.Component {
         this.setState({
             checkedValues: newChecked
         });
-        console.log("checkedValues is now : " + this.state.checkedValues)
+        console.log('checkedValues is now : ' + this.state.checkedValues);
     }
 
     checkAnswers(event){
@@ -40,7 +40,7 @@ class PollContainer extends React.Component {
                 correctAnswers++;
             }
         });
-        console.log(`You got ${correctAnswers} correct answers.  That is ${correctAnswers/totalAnswers*100}%`)
+        console.log(`You got ${correctAnswers} correct answers.  That is ${correctAnswers/totalAnswers*100}%`);
     }
 
     componentDidMount(){
@@ -82,7 +82,7 @@ class PollContainer extends React.Component {
                     <PollHeader text={header} />
                 </div>
                 <div className="row" style={rowStyle}>
-                    <div className="col-sm-4 col-sm-offset-4">
+                    <div>
                         <form>
                             {questionsOutput}
                             <PollSubmitButton handleClick={this.checkAnswers}/>
