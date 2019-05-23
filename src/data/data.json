@@ -4,21 +4,29 @@
     "header": "Welcome to the Poll!",
     "questions" : [
       {
-        "question": "What is the meaning of life?",
+        "question": "How do you say 'love' in Spanish?",
         "choices": [
-          {"value": "Love", "label": "To love and be loved"},
-          {"value": "Fun", "label": "To have fun"},
-          {"value": "42", "label": "42"}
+          {"value": "amor", "label": "amor"},
+          {"value": "amigo", "label": "amigo"},
+          {"value": "enamigo", "label": "enamigo"}
         ],
-        "correctAnswer": "42"
+        "correctAnswer": "amor"
       },
       {
-        "question": "What's your favorite color?:",
+        "question": "What is the correct word for blue?",
         "choices": [
-          {"value": "Orange", "label": "Orange"},
-          {"value": "Blue", "label": "Blue"}
+          {"value": "amarillo", "label": "amarillo"},
+          {"value": "azul", "label": "azul"}
         ],
-        "correctAnswer": "Blue"
+        "correctAnswer": "azul"
+      },
+      {
+        "question": "How do you say 'good morning'?",
+        "choices": [
+          {"value": "buenos dias", "label": "buenos dias"},
+          {"value": "buenas dias", "label": "buenas dias"}
+        ],
+        "correctAnswer": "buenos dias"
       }
     ]
 }

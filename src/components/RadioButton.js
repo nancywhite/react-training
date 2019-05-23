@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class RadioButton extends React.Component{
+class RadioButton extends React.Component {
 
-    render(){
+    handleChange() {
+        console.log('handling change for: ' + this.props.name + " " + this.props.value);
+        this.props.onChange(this.props.name, this.props.value);
+    }
+    render() {
         return (
             <div className="radio">
                 <label>
-                    <input type="radio"
-                        name = {this.props.name}
-                        value = {this.props.value}
-                        checked = {this.props.checked}
-                        onChange = { () => {this.props.changeHandler(this.props.value);} }
+                    <input
+                        type='radio'
+                        name={this.props.name}
+                        value={this.props.value}
+                        checked={this.props.checkedValues}
+                        onChange={this.handleChange.bind(this)}
+
                     />
                     <span>{this.props.label}</span>
                 </label>
@@ -21,7 +27,7 @@ class RadioButton extends React.Component{
 }
 
 RadioButton.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.number,
     value: PropTypes.string,
     checked: PropTypes.bool,
     onChange: PropTypes.func

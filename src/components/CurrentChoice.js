@@ -1,3 +1,7 @@
 import React from 'react';
 
-export default props => <div>{props.checked}</div> ;
+function CurrentChoice(props){
+    return(<div>Current selection: {props.checked}</div>);
+}
+
+export default CurrentChoice;
