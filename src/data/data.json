@@ -1,10 +1,10 @@
 {
   "poll":
   {
-    "header": "Welcome to the Poll!",
+    "header": "Welcome to the Spanish Quiz!",
     "questions" : [
       {
-        "question": "How do you say 'love' in Spanish?",
+        "question": "What is the correct word for 'love'?",
         "choices": [
           {"value": "amor", "label": "amor"},
           {"value": "amigo", "label": "amigo"},
@@ -27,6 +27,14 @@
           {"value": "buenas dias", "label": "buenas dias"}
         ],
         "correctAnswer": "buenos dias"
+      },
+      {
+        "question": "Quales son dos y cinco'?",
+        "choices": [
+          {"value": "sete", "label": "sete"},
+          {"value": "siete", "label": "siete"}
+        ],
+        "correctAnswer": "siete"
       }
     ]
 }

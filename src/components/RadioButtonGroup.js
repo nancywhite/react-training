@@ -23,7 +23,7 @@ class RadioButtonGroup extends React.Component{
         return (
             <div>
                 {choiceItems}
-                <CurrentChoice checked = {this.props.checkedValues} />
+                <CurrentChoice checked = {this.props.checkedValue} />
             </div>
         );
     }

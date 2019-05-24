@@ -15,7 +15,7 @@ class RadioButton extends React.Component {
                         type='radio'
                         name={this.props.name}
                         value={this.props.value}
-                        checked={this.props.checkedValues}
+                        checked={this.props.checkedValue}
                         onChange={this.handleChange.bind(this)}
 
                     />
